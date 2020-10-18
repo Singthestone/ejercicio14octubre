@@ -1,1 +1,55 @@
+/* *********************************** */
 
+
+/* *** Estilos SOLO para primero.html *** */
+
+
+/* *********************************** */
+
+html {
+    font-family: Helvetica, sans-serif;
+    color: rgb(22, 108, 177);
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 5% 1fr 5%;
+    justify-items: center;
+}
+
+figure {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+header {
+    grid-column: 2/3;
+}
+
+main {
+    grid-column: 2/3;
+}
+
+.princesas {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 300px;
+    gap: 1rem;
+}
+
+.princesa1,
+.princesa2,
+.princesa3 {
+    background-image: url(../img/desktop/primero/snowwhite.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.princesa2 {
+    background-image: url(../img/desktop/primero/megara.jpg);
+}
+
+.princesa3 {
+    background-image: url(../img/desktop/primero/ariel.jpg);
+}
