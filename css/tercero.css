@@ -1,0 +1,27 @@
+#container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 190px, 1fr;
+    grid-template-area: "logo logo logo logo logo logo logo"
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+figure {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.banner1 {
+    grid-column: 1/5;
+    grid-row: 1;
+}
+
+.emblema1 {
+    grid-row: 1;
+    grid-column: 5;
+}
