@@ -4,6 +4,7 @@ body {
     align-items: center;
     font-family: sans-serif;
     font-size: 2rem;
+    padding: 20px;
 }
 
 a {
@@ -42,12 +43,16 @@ nav {
 
 nav a:hover {
     font-size: 5rem;
+    color: rgb(22, 108, 177);
 }
 
 
 /* visualización del pantallazo */
 
-.nav-link1:hover~.pantallazo {
+.nav-link1:hover~.pantallazo,
+.nav-link2:hover~.pantallazo,
+.nav-link3:hover~.pantallazo,
+.nav-link4:hover~.pantallazo {
     grid-column: 2/3;
     grid-row: 1/5;
     width: 100%;
@@ -57,8 +62,14 @@ nav a:hover {
     background-position: center;
 }
 
-.nav-link2:hover figure {}
+.nav-link2:hover~.pantallazo {
+    background-image: url(../img/desktop/index/preview_segundo.png);
+}
 
-.nav-link3:hover figure {}
+.nav-link3:hover~.pantallazo {
+    background-image: url(../img/desktop/index/preview_tercero.png);
+}
 
-.nav-link4:hover figure {}
+.nav-link4:hover~.pantallazo {
+    background-image: url(../img/desktop/index/preview_cuarto.png);
+}

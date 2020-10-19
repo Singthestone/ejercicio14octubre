@@ -38,7 +38,6 @@ figure {
     background-size: cover;
     background-position: center;
     filter: grayscale(1);
-    border: 0.5rem solid black;
     border-radius: 10%;
     z-index: 0;
 }
@@ -93,8 +92,9 @@ figure {
 .pixar07:hover,
 .pixar08:hover {
     z-index: 1;
-    filter: grayscale(0);
-    transition: 1s;
+    filter: none;
+    transition: 0.7s;
     transform: scale(2);
-    border: 0;
+    transform-origin: center;
+    border-radius: 0;
 }

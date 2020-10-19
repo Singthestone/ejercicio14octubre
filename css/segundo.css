@@ -1,3 +1,34 @@
 html {
     padding: 20px;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas: "pic . ." "pic logo logo" "pic texto texto" "pic estrellita estrellita" "pic . ." "pic . .";
+}
+
+.pic {
+    grid-area: pic;
+    background-image: url(../img/desktop/segundo/spidey.png);
+}
+
+.logo {
+    grid-area: logo;
+    background-image: url(../img/desktop/segundo/logomarvel.jpg);
+}
+
+.texto {
+    grid-area: texto;
+}
+
+.estrellita {
+    grid-area: estrellita;
 }
