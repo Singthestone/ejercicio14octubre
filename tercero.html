@@ -1,27 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tercero</title>
-    <link rel="stylesheet" href="tercero.css">
+    <meta charset="utf-8" />
+    <!-- SEO = Básico -->
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO = Redes Sociales -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <!-- App Web, inidicar al navegador que elementos mostrar en un JSON -->
+    <link rel="manifest" href="site.webmanifest" />
+    <!-- icono de acceso para IOS -->
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Recordar que favicon.ico tiene que estar en el directorio inicial -->
+
+    <!-- links de estilos -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tercero.css" />
+    <!-- Se cambia el tema de algunos navegadores -->
+    <meta name="theme-color" content="#fafafa" />
 </head>
 
 <body>
-    <figure><img src="img/icon/icon.svg" alt=""></figure>
-    <main id="container">
-        <figure class="banner1"><img src="img/desktop/banner1.jpg" alt=""></figure>
-        <figure class="emblema1"><img src="img/desktop/emblema1.jpg" alt=""></figure>
-        <figure class="banner2"><img src="img/desktop/banner2.jpg" alt=""></figure>
-        <figure class="emblema2"><img src="img/desktop/emblema2.jpg" alt=""></figure>
-        <figure class="banner3"><img src="img/desktop/banner3.jpg" alt=""></figure>
-        <figure class="emblema3"><img src="img/desktop/emblema3.jpg" alt=""></figure>
-        <figure class="banner4"><img src="img/desktop/banner4.jpg" alt=""></figure>
-        <figure class="emblema4"><img src="img/desktop/emblema4.jpg" alt=""></figure>
-    </main>
+    <div id="container">
+        <!-- Header con Logo -->
+        <header>
+            <img class="header_logo" src="img/desktop/tercero/logo.svg" alt="" />
+        </header>
+        <!-- Main - Imágenes -->
+        <main>
+            <figure class="barra1">
+                <img src="img/desktop/tercero/banner1.jpg" alt="" class="barra1_banner" />
+            </figure>
+            <figcaption class="barra1_emblema">
+                <img src="img/desktop/tercero/emblema1.svg" alt="" />
+            </figcaption>
 
+            <figure class="barra2">
+                <img src="img/desktop/tercero/banner2.jpg" alt="" class="barra2_banner" />
+            </figure>
+            <figcaption class="barra2_emblema">
+                <img src="img/desktop/tercero/emblema2.svg" alt="" />
+            </figcaption>
 
+            <figure class="barra3">
+                <img src="img/desktop/tercero/banner3.jpg" alt="" class="barra3_banner" />
+            </figure>
+            <figcaption class="barra3_emblema">
+                <img src="img/desktop/tercero/emblema3.svg" alt="" />
+            </figcaption>
+
+            <figure class="barra4">
+                <img src="img/desktop/tercero/banner4.jpg" alt="" class="barra4_banner" />
+            </figure>
+            <figcaption class="barra4_emblema">
+                <img src="img/desktop/tercero/emblema4.svg" alt="" />
+            </figcaption>
+        </main>
+    </div>
 </body>
 
 </html>

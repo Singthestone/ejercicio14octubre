@@ -1,4 +1,64 @@
-/* *********************************** */
-/* *** Estilos SOLO para index.html *** */
-/* *********************************** */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 2rem;
+}
 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* menu */
+
+nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.nav-link1 {
+    grid-row: 1/2;
+}
+
+.nav-link2 {
+    grid-row: 2/3;
+}
+
+.nav-link3 {
+    grid-row: 3/4;
+}
+
+.nav-link4 {
+    grid-row: 4/5;
+}
+
+
+/* aumento de tipografia */
+
+nav a:hover {
+    font-size: 5rem;
+}
+
+
+/* visualización del pantallazo */
+
+.nav-link1:hover~.pantallazo {
+    grid-column: 2/3;
+    grid-row: 1/5;
+    width: 100%;
+    background-image: url(../img/desktop/index/preview_primero.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.nav-link2:hover figure {}
+
+.nav-link3:hover figure {}
+
+.nav-link4:hover figure {}

@@ -1,27 +1,123 @@
-#container {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 190px, 1fr;
-    grid-template-area: "logo logo logo logo logo logo logo"
-}
+/* *********************************** */
 
-html {
-    margin: 0;
-    padding: 0;
+
+/* *** Estilos SOLO para tercero.html *** */
+
+
+/* *********************************** */
+
+
+/* mini-Reset */
+
+* {
+    box-sizing: border-box;
 }
 
 figure {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
 }
 
-.banner1 {
-    grid-column: 1/5;
-    grid-row: 1;
+
+/* Fondo */
+
+body {
+    background-image: url(../img/desktop/tercero/background.jpg);
+    background-size: cover;
+    overflow: hidden;
 }
 
-.emblema1 {
-    grid-row: 1;
-    grid-column: 5;
+
+/* Contenedor principal */
+
+
+/* Trabajo con Grid Areas */
+
+#container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 190px 1fr;
+    grid-template-areas: "logo" "main";
+}
+
+
+/* Header */
+
+header {
+    grid-area: logo;
+    padding: 1rem;
+    height: 100%;
+}
+
+.header_logo {
+    height: 100%;
+}
+
+
+/* Main */
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "barra1 barra1 barra1 barra1 emblema1 ." "barra2 barra2 barra2 emblema2 . ." "barra3 barra3 barra3 barra3 emblema3 ." "barra4 emblema4 . . . .";
+    justify-items: start;
+    align-items: center;
+    gap: 1%;
+}
+
+.barra1 {
+    grid-area: barra1;
+}
+
+.barra2 {
+    grid-area: barra2;
+}
+
+.barra3 {
+    grid-area: barra3;
+}
+
+.barra4 {
+    grid-area: barra4;
+}
+
+
+/* Tamaño ajustable de las imágenes */
+
+.barra1>img,
+.barra2>img,
+.barra3>img,
+.barra4>img {
+    width: 100%;
+    max-height: 190px;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+}
+
+
+/* Logos */
+
+.barra1_logo {
+    grid-area: logo1;
+}
+
+.barra2_logo {
+    grid-area: logo2;
+}
+
+.barra3_logo {
+    grid-area: logo3;
+}
+
+.barra4_logo {
+    grid-area: logo4;
+}
+
+.barra1_logo img,
+.barra2_logo img,
+.barra3_logo img,
+.barra4_logo img {
+    height: 190px;
 }
