@@ -1,0 +1,102 @@
+body {
+    height: 100vh;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    /*     grid-template-areas: ". . . . . ." ". pixar03 pixar04 pixar05 pixar06 ." ". pixar02 Logo-Pixar Logo-Pixar pixar07 ." ". pixar01 Logo-Pixar Logo-Pixar pixar08 ." ". . . . . ."; */
+}
+
+
+/* Imágenes de la página */
+
+.logoPixar,
+.pixar01,
+.pixar02,
+.pixar03,
+.pixar04,
+.pixar05,
+.pixar06,
+.pixar07,
+.pixar08 {
+    background-image: url(../img/desktop/cuarto/logo_pixar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.pixar01 {
+    background-image: url(../img/desktop/cuarto/pixar01.jpg);
+}
+
+.pixar02 {
+    background-image: url(../img/desktop/cuarto/pixar02.jpg);
+}
+
+.pixar03 {
+    background-image: url(../img/desktop/cuarto/pixar03.jpg);
+}
+
+.pixar04 {
+    background-image: url(../img/desktop/cuarto/pixar04.jpg);
+}
+
+.pixar05 {
+    background-image: url(../img/desktop/cuarto/pixar05.jpg);
+}
+
+.pixar06 {
+    background-image: url(../img/desktop/cuarto/pixar06.jpg);
+}
+
+.pixar07 {
+    background-image: url(../img/desktop/cuarto/pixar07.jpg);
+}
+
+.pixar08 {
+    background-image: url(../img/desktop/cuarto/pixar08.jpg);
+}
+
+
+/* Estructura del grid y disposición de imágenes */
+
+.logo-Pixar {
+    grid-area: logo-Pixar;
+    grid-column: 3/5;
+    grid-row: 3/5;
+}
+
+.pixar01 {
+    grid-area: pixar01;
+}
+
+.pixar02 {
+    grid-area: pixar02;
+}
+
+.pixar03 {
+    grid-area: pixar03;
+}
+
+.pixar04 {
+    grid-area: pixar04;
+}
+
+.pixar05 {
+    grid-area: pixar05;
+}
+
+.pixar06 {
+    grid-area: pixar06;
+}
+
+.pixar07 {
+    grid-area: pixar07;
+}
+
+.pixar08 {
+    grid-area: pixar08;
+}
