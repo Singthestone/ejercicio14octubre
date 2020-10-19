@@ -4,86 +4,97 @@ body {
 
 #container {
     display: grid;
+    height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
+    gap: 10px;
     grid-template-areas: ". . . . . ." ". pixar03 pixar04 pixar05 pixar06 ." ". pixar02 logo logo pixar07 ." ". pixar01 logo logo pixar08 ." ". . . . . .";
+}
+
+figure {
+    margin: 0;
+    padding: 0;
 }
 
 .logo {
     grid-area: logo;
+    background-image: url(../img/desktop/cuarto/logo_pixar.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
-.pixar01 {
+.pixar01,
+.pixar02,
+.pixar03,
+.pixar04,
+.pixar05,
+.pixar06,
+.pixar07,
+.pixar08 {
     grid-area: pixar01;
     background-image: url(../img/desktop/cuarto/pixar01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    filter: grayscale(1);
+    border: 0.5rem solid black;
+    border-radius: 10%;
+    z-index: 0;
 }
+
+
+/* Cargar el resto de imágenes de la página */
 
 .pixar02 {
     grid-area: pixar02;
-}
-
-.pixar03 {
-    grid-area: pixar03;
-}
-
-.pixar04 {
-    grid-area: pixar04;
-}
-
-.pixar05 {
-    grid-area: pixar05;
-}
-
-.pixar06 {
-    grid-area: pixar06;
-}
-
-.pixar07 {
-    grid-area: pixar07;
-}
-
-.pixar08 {
-    grid-area: pixar08;
-}
-
-
-/* Imágenes de la página */
-
-.logo {
-    background-image: url(../img/desktop/cuarto/logo_pixar.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.pixar02 {
     background-image: url(../img/desktop/cuarto/pixar02.webp);
 }
 
 .pixar03 {
+    grid-area: pixar03;
     background-image: url(../img/desktop/cuarto/pixar03.jpg);
 }
 
 .pixar04 {
+    grid-area: pixar04;
     background-image: url(../img/desktop/cuarto/pixar04.jpg);
 }
 
 .pixar05 {
+    grid-area: pixar05;
     background-image: url(../img/desktop/cuarto/pixar05.jpg);
 }
 
 .pixar06 {
+    grid-area: pixar06;
     background-image: url(../img/desktop/cuarto/pixar06.jpg);
 }
 
 .pixar07 {
+    grid-area: pixar07;
     background-image: url(../img/desktop/cuarto/pixar07.jpg);
 }
 
 .pixar08 {
+    grid-area: pixar08;
     background-image: url(../img/desktop/cuarto/pixar08.jpg);
+}
+
+
+/* Creación del aumento al pasar el ratón por delante */
+
+.pixar01:hover,
+.pixar02:hover,
+.pixar03:hover,
+.pixar04:hover,
+.pixar05:hover,
+.pixar06:hover,
+.pixar07:hover,
+.pixar08:hover {
+    z-index: 1;
+    filter: grayscale(0);
+    transition: 1s;
+    transform: scale(2);
+    border: 0;
 }
