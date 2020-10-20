@@ -1,69 +1,20 @@
-/* *********************************** */
-
-
-/* *** Estilos SOLO para tercero.html *** */
-
-
-/* *********************************** */
-
-
-/* mini-Reset */
-
-* {
-    box-sizing: border-box;
-}
-
-figure {
-    margin: 0;
-}
-
-
-/* Fondo */
-
 body {
-    background-image: url(../img/desktop/tercero/background.jpg);
-    background-size: cover;
-    overflow: hidden;
-}
-
-
-/* Contenedor principal */
-
-
-/* Trabajo con Grid Areas */
-
-#container {
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 190px 1fr;
-    grid-template-areas: "logo" "main";
+    padding: 10px;
+    background-image: url("../img/desktop/tercero/background.jpg");
 }
 
+.grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas: "logo . . . ." "barra1 barra1 barra1 barra1 icon1" "barra2 barra2 barra2 icon2 ." "barra3 barra3 barra3 barra3 icon3" "barra4 icon4 . . .";
+}
 
-/* Header */
-
-header {
+.logo {
     grid-area: logo;
-    padding: 1rem;
-    height: 100%;
-}
-
-.header_logo {
-    height: 100%;
-}
-
-
-/* Main */
-
-main {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-areas: "barra1 barra1 barra1 barra1 emblema1 ." "barra2 barra2 barra2 emblema2 . ." "barra3 barra3 barra3 barra3 emblema3 ." "barra4 emblema4 . . . .";
-    justify-items: start;
-    align-items: center;
-    gap: 1%;
 }
 
 .barra1 {
@@ -82,42 +33,18 @@ main {
     grid-area: barra4;
 }
 
-
-/* Tamaño ajustable de las imágenes */
-
-.barra1>img,
-.barra2>img,
-.barra3>img,
-.barra4>img {
-    width: 100%;
-    max-height: 190px;
-    border-top: 3px solid #fff;
-    border-bottom: 3px solid #fff;
-    border-right: 3px solid #fff;
+.icon1 {
+    grid-area: icon1;
 }
 
-
-/* Logos */
-
-.barra1_logo {
-    grid-area: logo1;
+.icon2 {
+    grid-area: icon2;
 }
 
-.barra2_logo {
-    grid-area: logo2;
+.icon3 {
+    grid-area: icon3;
 }
 
-.barra3_logo {
-    grid-area: logo3;
-}
-
-.barra4_logo {
-    grid-area: logo4;
-}
-
-.barra1_logo img,
-.barra2_logo img,
-.barra3_logo img,
-.barra4_logo img {
-    height: 190px;
+.icon4 {
+    grid-area: icon4;
 }
