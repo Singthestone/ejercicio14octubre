@@ -10,6 +10,7 @@ html {
     font-family: Helvetica, sans-serif;
     color: rgb(22, 108, 177);
     font-size: 1rem;
+    padding: 10px;
 }
 
 #container {
@@ -19,21 +20,18 @@ html {
 }
 
 figure {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
 }
 
-header {
-    grid-column: 2/3;
-}
-
-main {
+p,
+.logo,
+.princesas {
     grid-column: 2/3;
 }
 
 .princesas {
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 300px;
     gap: 1rem;
 }
@@ -45,12 +43,15 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    grid-column: 1/2;
 }
 
 .princesa2 {
     background-image: url(../img/desktop/primero/megara.jpg);
+    grid-column: 2/3;
 }
 
 .princesa3 {
     background-image: url(../img/desktop/primero/ariel.jpg);
+    grid-column: 3/4;
 }
