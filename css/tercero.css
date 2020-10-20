@@ -1,20 +1,60 @@
+/* mini-Reset */
+
+* {
+    box-sizing: border-box;
+}
+
+figure {
+    margin: 0;
+}
+
+
+/* Fondo */
+
 body {
-    height: 100vh;
-    padding: 10px;
-    background-image: url("../img/desktop/tercero/background.jpg");
+    background-image: url(../img/desktop/tercero/background.jpg);
+    background-size: cover;
+    overflow: hidden;
 }
 
-.grid-container {
+
+/* Contenedor principal */
+
+
+/* Trabajo con Grid Areas */
+
+#container {
+    height: 100vh;
     display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px 10px;
-    grid-template-areas: "logo . . . ." "barra1 barra1 barra1 barra1 icon1" "barra2 barra2 barra2 icon2 ." "barra3 barra3 barra3 barra3 icon3" "barra4 icon4 . . .";
+    grid-template-columns: 1fr;
+    grid-template-rows: 190px 1fr;
+    grid-template-areas: "logo" "main";
 }
 
-.logo {
+
+/* Header */
+
+header {
     grid-area: logo;
+    padding: 1rem;
+    height: 100%;
+}
+
+.header_logo {
+    height: 100%;
+}
+
+
+/* Main */
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "barra1 barra1 barra1 barra1 logo1 ." "barra2 barra2 barra2 logo2 . ." "barra3 barra3 barra3 barra3 logo3 ." "barra4 logo4 . . . .";
+    justify-items: start;
+    align-items: center;
+    gap: 1%;
 }
 
 .barra1 {
@@ -33,18 +73,42 @@ body {
     grid-area: barra4;
 }
 
-.icon1 {
-    grid-area: icon1;
+
+/* Tamaño ajustable de las imágenes */
+
+.barra1>img,
+.barra2>img,
+.barra3>img,
+.barra4>img {
+    width: 100%;
+    max-height: 190px;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
 }
 
-.icon2 {
-    grid-area: icon2;
+
+/* Logos */
+
+.barra1_logo {
+    grid-area: logo1;
 }
 
-.icon3 {
-    grid-area: icon3;
+.barra2_logo {
+    grid-area: logo2;
 }
 
-.icon4 {
-    grid-area: icon4;
+.barra3_logo {
+    grid-area: logo3;
+}
+
+.barra4_logo {
+    grid-area: logo4;
+}
+
+.barra1_logo img,
+.barra2_logo img,
+.barra3_logo img,
+.barra4_logo img {
+    height: 190px;
 }
